@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SmartWork-AI workplace productivity assistant prototype">
+  <title>SmartWork-AI | Workplace Productivity Assistant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="SmartWork-AI home"><span class="brand-icon">✦</span> SmartWork<span>-AI</span></a>
+    <span class="prototype-label">ASA 23 PROJECT</span>
+  </header>
+
+  <main class="layout">
+    <section class="intro">
+      <p class="eyebrow">YOUR WORKDAY, SIMPLIFIED</p>
+      <h1>Work smarter.<br><span>Make time for more.</span></h1>
+      <p class="intro-copy">A productivity assistant prototype to help organize everyday workplace tasks with AI-inspired workflows.</p>
+      <div class="feature-pills">
+        <span>✉ Email drafts</span><span>▤ Meeting notes</span><span>✓ Task planning</span><span>⌕ Research</span>
+      </div>
+    </section>
+
+    <section class="workspace" aria-labelledby="workspace-title">
+      <div class="workspace-heading">
+        <div>
+          <p class="eyebrow">PRODUCTIVITY TOOLKIT</p>
+          <h2 id="workspace-title">What can I help with?</h2>
+        </div>
+        <span class="status-dot">Prototype mode</span>
+      </div>
+
+      <div class="tool-grid" role="tablist" aria-label="Productivity tools">
+        <button class="tool-card active" data-tool="email" role="tab" aria-selected="true">
+          <span class="tool-icon">✉</span><strong>Email generator</strong><small>Draft a professional email</small>
+        </button>
+        <button class="tool-card" data-tool="meeting" role="tab" aria-selected="false">
+          <span class="tool-icon">▤</span><strong>Meeting summarizer</strong><small>Organize notes and actions</small>
+        </button>
+        <button class="tool-card" data-tool="tasks" role="tab" aria-selected="false">
+          <span class="tool-icon">✓</span><strong>Task planner</strong><small>Turn goals into a plan</small>
+        </button>
+        <button class="tool-card" data-tool="research" role="tab" aria-selected="false">
+          <span class="tool-icon">⌕</span><strong>Research helper</strong><small>Structure a research brief</small>
+        </button>
+        <button class="tool-card" data-tool="chat" role="tab" aria-selected="false">
+          <span class="tool-icon">✧</span><strong>Assistant chat</strong><small>Ask a workplace question</small>
+        </button>
+      </div>
+
+      <form id="assistant-form" class="composer">
+        <label id="input-label" for="user-input">What should the email be about?</label>
+        <textarea id="user-input" rows="5" placeholder="Example: Ask my manager for a meeting next week to discuss project progress." required></textarea>
+        <div class="composer-footer">
+          <p class="helper-text">Tip: include context, audience, and the result you want.</p>
+          <button class="primary-button" type="submit">Generate result <span aria-hidden="true">→</span></button>
+        </div>
+      </form>
+
+      <section id="result-panel" class="result-panel" aria-live="polite" hidden>
+        <div class="result-heading">
+          <div><p class="eyebrow">YOUR DRAFT</p><h3 id="result-title">Generated result</h3></div>
+          <button id="copy-button" class="secondary-button" type="button">Copy text</button>
+        </div>
+        <pre id="result-text"></pre>
+        <p class="notice">Prototype output: review and edit before using. Connect an AI model to enable genuine AI-generated results.</p>
+      </section>
+    </section>
+
+    <section class="responsible">
+      <span class="responsible-icon">盾</span>
+      <div><strong>Use AI responsibly</strong><p>Check facts, protect confidential information, and review every draft before sharing it. Do not enter passwords, private client details, or sensitive workplace data.</p></div>
+    </section>
+
+    <footer>
+      <span>SmartWork-AI · ASA 23</span>
+      <span>Beginner-friendly project prototype</span>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
